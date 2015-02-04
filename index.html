@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="eng" lang="eng">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>CSS Only Pinterest Style Grid</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" type="text/css" href="../styles.css"/>
+<link rel="stylesheet" type="text/css" href="pin-grid.css" />
+<link rel="stylesheet" type="text/css" href="../prism.css"/>
+</head>
+<body>
+<div class="wf_container wf_margin20" style="background-color:#d8d5d4;">
+  <div class="wf_centered"><a href="http://www.kimlarocca.com"><img src="http://www.kimlarocca.com/images/logo.png"></a></div>
+  <h1 class="wf_centered"> Pinterest Hacks</h1>
+  <div class="wf_centered" style="position: relative;left: -50%;">
+    <div class="wf_centered" style="position: relative;left: 50%; ">
+      <div class="wf_button"><a href="index.html">Pin Widget Grid</a></div>
+      <div class="wf_button"><a href="user.html">User Profile</a></div>
+      <div class="wf_button"><a href="board.html">Board Widget</a></div>
+      <div class="wf_button"><a href="pinterest-style-grid.html">Pinterest Style Grid</a></div>
+    </div>
+  </div>
+  <div class="wf_clearfloat" style="height:20px"></div>
+</div>
+
+
+<div class="wf_container wf_clearfloat wf_centered" style="width:95%"> 
+  <h2 class="wf_centered wf_margin20">Responsive Pin Widget Grid</h2>
+  
+  
+  <!-- Responsive Pinterest Pin Widget Grid -->
+  <div class="pinGridWrapper">
+    <div class="pinGrid">
+      <div class="pin">
+        <a data-pin-do="embedPin" href="http://www.pinterest.com/pin/542824561308268152/"></a>
+      </div>
+      <div class="pin">
+        <a data-pin-do="embedPin" href="http://www.pinterest.com/pin/542824561311603038/"></a>
+      </div>
+      <div class="pin">
+        <a data-pin-do="embedPin" href="http://www.pinterest.com/pin/542824561308271868/"></a>
+      </div>
+      <div class="pin">
+        <a data-pin-do="embedPin" href="http://www.pinterest.com/pin/542824561308271992/"></a>
+      </div>
+      <div class="pin">
+        <a data-pin-do="embedPin" href="http://www.pinterest.com/pin/542824561308271144/"></a>
+      </div>
+      <div class="pin">
+        <a data-pin-do="embedPin" href="http://www.pinterest.com/pin/542824561308271835/"></a>
+      </div>
+      <div class="pin">
+        <a data-pin-do="embedPin" href="http://www.pinterest.com/pin/542824561308268542/"></a>
+      </div>
+      <div class="pin">
+        <a data-pin-do="embedPin" href="http://www.pinterest.com/pin/542824561308268322/"></a>
+      </div>
+      <div class="pin">
+        <a data-pin-do="embedPin" href="http://www.pinterest.com/pin/542824561308268302/"></a>
+      </div>
+      <div class="pin">
+        <a data-pin-do="embedPin" href="http://www.pinterest.com/pin/542824561308270521/"></a>
+      </div>
+    </div>
+  </div>
+  <!-- end Responsive Pinterest Pin Widget Grid -->
+  
+    <div class="wf_clearfloat wf_margin20"></div>
+  <div class="wf_text_left">
+  <h2 class="wf_margin20">The CSS</h2>
+  <p class="wf_margin20">We are using a mobile-first approach, so define your grid wrapper .pinGridWrapper with a max-width of 237px and center it (237px is the width of the Pinterest pin widget at the time this was written):</p>
+  <pre><code class="language-css">.pinGridWrapper {
+	text-align:center; 
+    margin:auto; 
+    max-width: 237px;
+}
+</code></pre>
+
+  <p class="wf_margin20">Since our smallest width will be 320px for iPhone 4 and below, we'll start with just 1 column. Setup a class for the grid called .pinGrid with column-count of 1 and a gap of 15px:</p>
+  <pre><code class="language-css">.pinGrid {
+	-webkit-column-count: 1;
+	-webkit-column-gap: 15px;
+	-moz-column-count: 1;
+	-moz-column-gap: 15px;
+	column-count: 1;
+	column-gap: 15px;
+}
+</code></pre>
+
+<p class="wf_margin20">Next setup your .pin class, which will hold the pin widget code Pinterest provides. Use 237px again for the width and column-break-inside: avoid; so that the contents of the .pin div don't get chopped:</p>
+  <pre><code class="language-css">.pin {
+	display: inline-block;
+	margin: 0 0 15px;
+	-webkit-column-break-inside: avoid;
+	-moz-column-break-inside: avoid;
+	column-break-inside: avoid;
+	width: 237px;
+	max-width: 100%;
+}
+</code></pre>
+  <p class="wf_margin20">Now add some responsive juice using media queries! For this example we are going up to 4 columns of pins, increasing the column count and the wrapper size (in multiples of 237px) as we go:</p>
+  <pre><code class="language-css">@media (min-width: 534px) {
+.pinGridWrapper {
+	max-width: 534px;
+}
+.pinGrid {
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+}
+}
+ @media (min-width: 801px) {
+.pinGridWrapper {
+	max-width: 801px;
+}
+.pinGrid {
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
+}
+}
+ @media (min-width: 1068px) {
+.pinGridWrapper {
+	max-width: 1068px;
+}
+.pinGrid {
+	-webkit-column-count: 4;
+	-moz-column-count: 4;
+	column-count: 4;
+}
+}</code></pre>
+  <div class="wf_clearfloat wf_margin20"></div>
+  
+  <h2 class="wf_margin20">The HTML</h2>
+  <p class="wf_margin20">Update the urls to your pins' urls, and repeat the .pin div as necessary:</p>
+  <pre><code class="language-markup">&lt;div class=&quot;pinGridWrapper&quot;&gt;
+  &lt;div class=&quot;pinGrid&quot;&gt;
+    &lt;div class=&quot;pin&quot;&gt;&lt;a data-pin-do=&quot;embedPin&quot; href=&quot;http://www.pinterest.com/pin/542824561308268152/&quot;&gt;&lt;/a&gt;&lt;/div&gt;
+    &lt;div class=&quot;pin&quot;&gt;&lt;a data-pin-do=&quot;embedPin&quot; href=&quot;http://www.pinterest.com/pin/542824561311603038/&quot;&gt;&lt;/a&gt;&lt;/div&gt;
+    .....
+  &lt;/div&gt;
+&lt;/div&gt;
+  </code></pre>
+  <p class="wf_margin20">There you have it. Enjoy!</p>
+  </div>
+</div>
+<script type="text/javascript" async data-pin-hover="true" src="//assets.pinterest.com/js/pinit.js"></script>
+<script type="text/javascript" src="../prism.js"></script>
+</body>
+</html>

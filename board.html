@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" type="text/css" href="../styles.css">
+<link rel="stylesheet" type="text/css" href="../prism.css"/>
+<link rel="shortcut icon" href="http://www.kimlarocca.com/favicon.ico">
+<title>Responsive Pinterest Widgets :: Responsive Pinterest Board Widget</title>
+<style>
+.pinterestBoardWrapper {
+	width: 100%;
+	margin: auto;
+}
+.pinterestBoard {
+	margin: auto;
+	text-align: center;
+}
+.pinterestBoard span {
+	overflow: hidden;
+	max-width: 100%!important;
+}
+</style>
+</head>
+<body>
+<div class="wf_container wf_margin20" style="background-color:#d8d5d4;">
+  <div class="wf_centered"><a href="http://www.kimlarocca.com"><img src="http://www.kimlarocca.com/images/logo.png"></a></div>
+  <h1 class="wf_centered">Pinterest Hacks</h1>
+  <div class="wf_centered" style="position: relative;left: -50%;">
+    <div class="wf_centered" style="position: relative;left: 50%; ">
+      <div class="wf_button"><a href="index.html">Pin Widget Grid</a></div>
+      <div class="wf_button"><a href="user.html">User Profile</a></div>
+      <div class="wf_button"><a href="board.html">Board Widget</a></div>
+      <div class="wf_button"><a href="pinterest-style-grid.html">Pinterest Style Grid</a></div>
+    </div>
+  </div>
+  <div class="wf_clearfloat" style="height:20px"></div>
+</div>
+
+<div class="wf_container wf_clearfloat wf_centered" style="width:95%">  
+  <h2 class="wf_centered wf_margin20">Responsive Pinterest Board Widget</h2>
+  <p class="wf_centered wf_margin20">(refresh to resize the inner contents of the pinterest widget)</p>
+  
+  <!-- Responsive Pinterest Board Widget -->
+  <div class="pinterestBoardWrapper">
+    <div class="pinterestBoard"> 
+      <!--update the board url, update the width/height if you like --> 
+      <a data-pin-do="embedBoard" href="http://www.pinterest.com/dancemorristown/flight-risk-aerial-silks/" data-pin-scale-width="200" data-pin-scale-height="500"></a>
+    </div>
+  </div>
+  <!-- end Responsive Pinterest Board Widget -->
+  
+    <div class="wf_clearfloat wf_margin20"></div>
+  
+  <h2 class="wf_centered wf_margin20">The CSS</h2>
+  <pre><code class="language-css">
+.pinterestBoardWrapper {<br />
+  width: 100%;
+  margin: auto;
+}
+.pinterestBoard {
+  margin: auto;
+  text-align: center;
+}
+.pinterestBoard span {
+  overflow: hidden;
+  max-width: 100%!important;
+}
+  </code></pre>
+  
+  <div class="wf_clearfloat wf_margin20"></div>
+  
+  <h2 class="wf_centered wf_margin20">The HTML</h2>
+  <p class="wf_centered wf_margin20">Update the url to your board's url.</p>
+  <pre><code class="language-markup">
+&lt;div class=&quot;pinterestBoardWrapper&quot;&gt;
+  &lt;div class=&quot;pinterestBoard&quot;&gt;
+    &lt;a data-pin-do=&quot;embedBoard&quot; href=&quot;http://www.pinterest.com/dancemorristown/flight-risk-aerial-silks/&quot; data-pin-scale-width=&quot;200&quot; data-pin-scale-height=&quot;500&quot;&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+  </code></pre>
+</div>
+<script type="text/javascript" async  data-pin-hover="true" src="//assets.pinterest.com/js/pinit.js"></script>
+<script type="text/javascript" src="../prism.js"></script>
+</body>
+</html>

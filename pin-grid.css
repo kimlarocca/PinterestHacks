@@ -1,0 +1,56 @@
+/**
+* KimLaRocca.com
+* CSS Only Responsive Pin Widget Grid
+* Not fully supported in IE9 & under, but has a graceful fallback
+*
+**/
+.pinGridWrapper {
+	text-align:center; margin:auto; max-width: 237px;
+}
+.pinGrid {
+	-webkit-column-count: 1;
+	-webkit-column-gap: 15px;
+	-moz-column-count: 1;
+	-moz-column-gap: 15px;
+	column-count: 1;
+	column-gap: 15px;
+}
+.pin {
+	display: inline-block;
+	margin: 0 0 15px;
+	-webkit-column-break-inside: avoid;
+	-moz-column-break-inside: avoid;
+	column-break-inside: avoid;
+	width: 237px; /* the pin widget is 237px as of the time this was written */
+	max-width: 100%;
+}
+@media (min-width: 534px) {
+.pinGridWrapper {
+	max-width: 534px;
+}
+.pinGrid {
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+}
+}
+ @media (min-width: 801px) {
+.pinGridWrapper {
+	max-width: 801px;
+}
+.pinGrid {
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
+}
+}
+ @media (min-width: 1068px) {
+.pinGridWrapper {
+	max-width: 1068px;
+}
+.pinGrid {
+	-webkit-column-count: 4;
+	-moz-column-count: 4;
+	column-count: 4;
+}
+}
