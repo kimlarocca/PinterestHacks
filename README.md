@@ -2,9 +2,12 @@
 
 <img src="http://i2.wp.com/www.codenorris.com/wp-content/uploads/2015/01/PinterestHacks.jpg?w=750">
 
-A CSS only pinterest style grid! View the tutorial here:
+A CSS only pinterest style grid. Mobile friendly & responsive!
 
-http://www.codenorris.com/css-only-pinterest-style-grid/
+View the demo @ http://dojo.codenorris.com/k/PinterestStyleGrid/
+
+View the tutorial @ http://www.codenorris.com/css-only-pinterest-style-grid/
+
 
 Also includes demos of:
 
