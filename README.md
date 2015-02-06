@@ -16,3 +16,5 @@ Also includes demos of:
 * a responsive pinterest user profile widget
 
 Happy pinning!
+
+Licensed under the MIT license. (http://opensource.org/licenses/MIT)
